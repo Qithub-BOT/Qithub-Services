@@ -1,0 +1,12 @@
+version: "3"
+
+services:
+  qiitime:
+    container_name: qiitime
+    build: https://github.com/Qithub-BOT/QiiTime.git
+    image: qithubbot/qiitime:local
+    env_file: ./QiiTime/env_file.env
+    environment:
+      - MSTDN_ACCESSTOKEN
+      - IS_MODE_DEBUG
+    restart: always
